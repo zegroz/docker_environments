@@ -1,0 +1,32 @@
+version: "2"
+services:
+  my_service:
+    container_name: environment_container
+    build: 
+      context: ./docker-data
+      dockerfile: Dockerfile # for alternative file
+    # or 
+    # build: ./docker-file
+    environment:
+    # with .env file
+     - DEMO_VAR=${DEMO_VAR}
+     - Param2=${Param2}
+     - IpAddress=${IpAddress}
+     - Port=${Port}
+     - IsOk=${IsOk}
+     - MyString=${MyString}
+    # without .env file
+    #  - DEMO_VAR=Hallo test..
+    #  - Param2=woow!
+    #  - IpAddress=0.0.0.0
+    #  - Port=5000
+    #  - IsOk=1
+    #  - MyString=my-string
+    #command: ['/bin/sh -c "echo $$IpAddress $$Port $$IsOk $$MyString"']
+    #volumes:
+      #- docker-file:/app
+
+#volumes:
+  #myapp:
+  #A volume may be created directly outside of compose with docker volume create and then referenced inside docker-compose.yml as follows:
+    #external: true
