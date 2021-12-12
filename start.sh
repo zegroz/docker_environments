@@ -8,7 +8,7 @@
 #export IsOk=1
 #export MyString=my-string
 #./docker-file/hello
-######## Mit docker container test ########
+######## docker container test ########
 
 docker-compose build
 docker-compose up
