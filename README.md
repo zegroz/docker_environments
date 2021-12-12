@@ -1,4 +1,4 @@
-# docker
+# using docker environment variables
 
 docker-compose build
 
