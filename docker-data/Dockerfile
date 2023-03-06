@@ -9,10 +9,10 @@ RUN apt-get install g++ -y
 
 # copy of local files into the container
 # From Docker online documentation:
-# Although ADD and COPY are functionally similar, generally speaking, COPY is preferred. 
+# "Although ADD and COPY are functionally similar, generally speaking, COPY is preferred. 
 # That’s because it’s more transparent than ADD. COPY only supports the basic copying of local files into the container, 
 # while ADD has some features (like local-only tar extraction and remote URL support) that are not immediately obvious. 
-# Consequently, the best use for ADD is local tar file auto-extraction into the image, as in ADD rootfs.tar.xz /.
+# Consequently, the best use for ADD is local tar file auto-extraction into the image, as in ADD rootfs.tar.xz" /.
 #COPY . /app
 COPY . /work_dir_in_container
 #ADD . /app
